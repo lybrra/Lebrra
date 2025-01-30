@@ -1,0 +1,174 @@
+.coupon{
+    margin: 10px;
+}
+.coupon .addprdt{
+    position: fixed;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    min-height: 100vh;
+    background-color: rgba(0, 0, 0, 0.676);
+    z-index: 100;
+}
+.coupon .addprdt .close{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: black;
+    font-size: 25px;
+    cursor: pointer;
+    background-color: white;
+    border-radius: 50%;
+    padding: 3px;
+}
+.coupon .addprdt .addprdtbody{
+    width: 90vw;
+    background-color: white;
+    height: 100vh;
+    margin: 20px 0;
+    border-radius: 5px;
+    overflow-y: auto;
+}
+.coupon .addprdt .addprdtbody::-webkit-scrollbar{
+    display: none;
+}
+.coupon .couponHead{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.coupon .couponHead p{
+    color: black;
+    font-size: 22px;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+.coupon .couponHead button{
+    cursor: pointer;
+    padding: 8px 10px;
+    scale: 0.9;
+    border: none;
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: 500;
+    font-size: 11px;
+    letter-spacing: 1px;
+    box-shadow: 0 0px 0px 0 rgba(86, 86, 86, 0.3), 0 3px 5px 0 rgba(101, 101, 101, 0.3);
+}
+.coupon .couponList{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 10px;
+}
+.coupon .couponList .couponCard{
+    padding: 5px;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-gap: 10px;
+    background-color: white;
+    cursor: pointer;
+    border: 1px solid var(--primary-color);
+}
+.coupon .couponList .couponCard:hover{
+    box-shadow: 0 2px 4px 0 rgba(121, 121, 121, 0.2), 0 3px 10px 0 rgba(105, 105, 105, 0.19);
+    scale: 1.01;
+}
+.coupon .couponList .couponCard .left{
+    width: 100%;
+    height: 1005;
+    background-color: rgba(211, 211, 211, 0.726);
+    padding:5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.coupon .couponList .couponCard .left p{
+    font-size: 18px;
+    font-weight: 600;
+    color: black;
+}
+.coupon .couponList .couponCard .right{
+    position: relative;
+}
+.coupon .couponList .couponCard .right .status{
+    position: absolute;
+    top:-5px;
+    right:-5px;
+    background-color: rgba(156, 255, 156, 0.473);
+    color: green;
+    padding: 2px 3px;
+    
+}
+.coupon .couponList .couponCard .right p{
+    color: gray;
+    font-size: 12px;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+.coupon .couponList .couponCard .right .name{
+    font-weight: 600;
+    color: black;
+}
+.coupon .couponList .couponCard .right .date{
+    font-size: 12px;
+}
+
+
+.coupon .couponMake{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+.coupon .couponMake .centerDiv{
+    width: 50%;
+    background-color: white;
+    padding: 20px 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px 0 rgba(121, 121, 121, 0.2), 0 3px 10px 0 rgba(105, 105, 105, 0.19);
+}
+.coupon .couponMake div{
+    margin-bottom: 15px;
+}
+.coupon .couponMake div p{
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 5px;
+    color: rgb(60, 60, 60);
+}
+.coupon .couponMake div .alert{
+    font-size: 11px;
+    color: blue;
+}
+.coupon .couponMake div input,.coupon .couponMake div select{
+    width: 100%;
+    padding: 12px 5px;
+    border-radius: 5px;
+    border: 1px solid rgb(160, 160, 160);
+    background-color: rgba(238, 238, 238, 0.726);
+}
+@media screen and (max-width:1250px) {
+    .coupon .couponList{
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+@media screen and (max-width:950px) {
+    .coupon{
+        margin: 10px 5px;
+    }
+    .coupon .couponList{
+        grid-template-columns: repeat(2,1fr);
+        grid-gap: 5px;
+    }
+}
+@media screen and (max-width:650px) {
+    .coupon .couponList{
+        grid-template-columns: repeat(1,1fr);
+    }
+}

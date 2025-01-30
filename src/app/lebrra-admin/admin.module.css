@@ -1,0 +1,246 @@
+.admin{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: white;
+    width: 100vw;
+    min-height: 100vh;
+    z-index: 9995;
+    
+    color: black;
+
+}
+.admin .loginPage{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.53);
+
+}
+.admin .loginPage .loginForm{
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    min-width: 300px;
+}
+.admin .loginPage .loginForm div{
+    margin-bottom: 15px;
+    width: 100%;
+    height: 45px;
+    padding: 0 5px;
+    border: 1px solid var(--primary-color);
+    display: flex;
+    align-items: center;
+    border-radius: 2px;
+
+}
+.admin .loginPage .loginForm input{
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    color: var(--primary-color);
+    background-color: transparent;
+}
+.admin .loginPage .loginForm div .eyeIcon{
+    font-size: 20px;
+    color: var(--primary-color);
+
+}
+.admin .loginPage .loginForm button{
+    cursor: pointer;
+    padding: 8px 0;
+    width: 100%;
+    color: white;
+    background-color: var(--primary-color);
+    letter-spacing: 1px;
+    font-size: 18px;
+    border-radius: 2px;
+    border: none;
+    font-weight: 500;
+    transition: all 0.3s ease-in-out;
+
+}
+.admin .loginPage .loginForm button:hover{
+    letter-spacing: 2px;
+}
+.admin .adminBody .adminLeft{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 45px;
+    padding: 0 2rem;
+    border-bottom: 1px solid rgb(215, 215, 215);
+}
+.admin .adminBody .overlay{
+    position: fixed;
+    top: 45px;
+    left: 0;
+    width: 100vw;
+    height:calc(100vh - 45px);
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.53);
+}
+.admin .adminBody .adminLeft .adminMenu{
+    position: fixed;
+    top: 45px;
+    height: calc(100vh - 45px);
+    padding: 1rem;
+    background-color: white;
+    border-right: 1px solid rgb(215, 215, 215);
+    transition: all 0.3s ease-in-out;
+    z-index: 2;
+}
+.admin .adminBody .adminLeft .adminMenu ul{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    width: 260px;
+}
+.admin .adminBody .adminLeft .adminMenu ul li{
+margin-bottom: 3vh;
+font-size: 18px;
+font-weight: 600;
+cursor: pointer;
+color: black;
+}
+.admin .adminBody .adminLeft .adminMenu ul li:hover{
+    color: var(--primary-color);
+}
+.admin .adminBody .adminLeft .adminMenu ul li:hover li ul li{
+color: black;
+}
+.admin .adminBody .adminLeft .adminMenu ul li ul{
+    margin-left: 30px;
+    margin-top: 10px;
+}
+.admin .adminBody .adminLeft .adminMenu ul li ul li{
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+.admin .adminBody .adminLeft .adminMenu ul li ul li:hover{
+    color: blue;
+}
+.admin .adminBody .adminLeft button{
+    border: none;
+    padding: 5px 10px;
+    font-size: 12px;
+    color: white;
+    background-color: var(--primary-color);
+    cursor: pointer;
+}
+.admin .adminBody .adminLeft .search{
+    width: 40vw;
+    display: flex;
+    align-items: center;
+    height: 35px;
+    border: 1px solid black;
+    position: relative;
+}
+.admin .adminBody .adminLeft .search input{
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    padding: 0 5px;
+    background-color: transparent;
+    color: black;
+
+}
+.admin .adminBody .adminLeft .search button{
+    height: 100%;
+    padding: 0 15px;
+    margin-left: 5px;
+    border: none;
+    cursor: pointer;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.admin .adminBody .adminLeft .search .searchOptions{
+    position: absolute;
+    top: 40px;
+    background-color: white;
+    width: 100%;
+    padding: 5px;
+    max-height: 250px;
+    z-index: 3;
+}
+.admin .adminBody .adminLeft .search .searchOptions .noItem{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    letter-spacing: 1px;
+    padding: 5px 0;
+}
+.admin .adminBody .adminLeft .search .searchOptions .searchItems{
+    width: 100%;
+    max-height: 240px;
+    overflow-y: auto;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 5px;
+}
+.admin .adminBody .adminLeft .search .searchOptions .searchItems::-webkit-scrollbar{
+    display: none;
+}
+.admin .adminBody .adminLeft .search .searchOptions .searchItems .searchItem{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    padding: 5px;
+    background-color: rgb(237, 237, 237);
+    cursor: pointer;
+}
+.admin .adminBody .adminLeft .search .searchOptions .searchItems .searchItem p{
+    margin-top: 10px;
+    font-size: 12px;
+    font-weight: 500px;
+}
+.admin .adminBody .adminLeft p{
+    font-size: 25px;
+    cursor: pointer;
+}
+.admin .adminBody .adminRight{
+    overflow-y: auto;
+    height: calc(100vh - 45px);
+    padding: 10px;
+}
+.admin .adminBody .adminRight::-webkit-scrollbar{
+    display: none;
+}
+
+@media screen and (max-width:950px) {
+    .admin .adminBody .adminLeft .search .searchOptions .searchItems{
+        grid-template-columns: repeat(3,1fr);
+    }
+    .admin .adminBody .adminLeft .search{
+        width: 60vw;
+    }
+    .admin .adminBody .adminLeft{
+        padding: 0 1rem;
+    }
+    .admin .adminBody .adminLeft .search button{
+        padding: 0 5px;
+        margin-left: 2px;
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width:650px) {
+    .admin .adminBody .adminLeft .search .searchOptions .searchItems{
+        grid-template-columns: repeat(2,1fr);
+        grid-gap: 2px;
+    }
+    .admin .adminBody .adminLeft .search .searchOptions .searchItems .searchItem{
+        padding: 2px;
+        background-color: rgb(237, 237, 237);
+    }
+}

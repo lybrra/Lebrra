@@ -1,0 +1,67 @@
+.thank{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+    
+}
+.thank .thankDiv{
+    padding: 10px 1rem;
+}
+.thank .thankDiv h1{
+font-size: 3rem;
+letter-spacing: 1px;
+word-spacing: 4px;
+margin-bottom: 10px;
+color: var(--primary-color);
+}
+.thank .thankDiv h2{
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    word-spacing: 4px;
+    margin-bottom: 3px;
+color: var(--primary-color);
+
+    }
+.thank .thankDiv p{
+    color: rgb(75, 75, 75);
+    word-spacing: 2px;
+    font-size: 15px;
+}
+.thank .thankDiv p span{
+    color: blue;
+    font-weight: 600;
+    margin: 0 5px;
+}
+.thank .thankDiv img{
+    width: 200px;
+    margin: 20px 0;
+}
+.thank .thankDiv button{
+    width: 300px;
+    padding: 12px 0;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    background-color: var(--primary-color);
+    color: white;
+    /* margin-top: 50px; */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    margin: 30px auto 0 auto;
+    text-align: center;
+    justify-content: center;
+    border: none;
+    box-shadow: 0 4px 4px 0 rgba(142, 142, 142, 0.404), 0 6px 10px 0 rgba(135, 135, 135, 0.413);
+    transition: all 0.2s linear;
+
+}
+.thank .thankDiv button:hover{
+    scale: 0.95;
+}
+.thank .thankDiv button span:nth-child(2){
+    margin-left: 10px;
+    font-size: 30px;
+}

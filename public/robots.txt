@@ -1,0 +1,9 @@
+User-agent: *
+Disallow: /404
+Disallow: /checkout
+Disallow: /search
+Disallow: /collections/undefined
+Disallow: /products/undefined
+Disallow: /lebrra-admin
+Disallow: /order-track
+Sitemap: https://lebrra.com/api/sitemap.xml

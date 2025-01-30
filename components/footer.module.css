@@ -1,0 +1,153 @@
+.footer{
+    background-color: #EEEEEE;
+    color: black;
+    
+    padding: 3rem 8vw 1rem 8vw;
+    z-index: 11;
+    /* position: relative */
+}
+.footer ul{
+    list-style: none;
+}
+
+.footer .topFooter{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    padding-bottom: 5rem;
+    grid-gap: 20px;
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+.footer .topFooter .topLeft img{
+    width: 160px;
+    height: auto;
+}
+.footer .topFooter .topLeft ul{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+.footer .topFooter .topLeft ul li{
+    margin-right: 30px;
+    cursor: pointer;
+    transition: all 0.3s;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+.footer .topFooter .topLeft ul li:hover{
+    scale: 0.9;
+}
+.footer .topFooter .topRight p{
+font-size: 14px;
+font-weight: 500;
+letter-spacing: 1px;
+margin-bottom: 20px;
+}
+.footer .topFooter .topRight div{
+    display: flex;
+    align-items: center;
+    border-radius: 2px;
+    border: 2px solid black;
+    height: 50px;
+}
+.footer .topFooter .topRight div input{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    padding: 0 10px;
+}
+.footer .topFooter .topRight div input::placeholder{
+    color: black;
+    letter-spacing: 1px;
+    font-size: 15px;
+}
+.footer .topFooter .topRight div button{
+    height: 100%;
+    padding: 0 20px;
+    background-color: transparent;
+    border-left: 2px solid black !important;
+    border: none;
+    color: black;
+    font-weight: 500;
+    letter-spacing: 1px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.footer .topFooter .topRight div button:hover{
+    background-color: black;
+    color: white;
+}
+
+.footer .bottomFooter{
+    padding-top: 20px;
+}
+.footer .bottomFooter .bottomOne{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+}
+.footer .bottomFooter .bottomOne ul{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.footer .bottomFooter .bottomOne ul li{
+    margin-right: 30px;
+    letter-spacing: 1px;
+    font-weight: 500;
+    line-height: 2;
+    font-size: 14px;
+    cursor: pointer;
+}
+.footer .bottomFooter .bottomTwo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+.footer .bottomFooter .bottomTwo p{
+    font-size: 14px;
+    letter-spacing: 1px;
+    word-spacing: 5px;
+}
+.footer .bottomFooter .bottomTwo ul{
+    display: flex;
+    align-items: center;
+}
+.footer .bottomFooter .bottomTwo ul li{
+    margin-left: 15px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+@media screen and (max-width:950px) {
+    .footer .topFooter{
+        grid-template-columns:1fr;
+    }
+    .footer .topFooter .topRight{
+        margin-top: 3rem;
+    }
+    .footer .bottomFooter .bottomOne{
+        grid-template-columns: 1fr;
+    }
+    .footer{
+        padding: 3rem 2rem 1rem 2rem;
+    }
+}
+
+@media screen and (max-width:650px){
+    .footer{
+        padding: 3rem 1rem 1rem 1rem;
+    }
+    .footer .topFooter .topLeft ul{
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 20px;
+    }
+    .footer .topFooter .topLeft ul li{
+        margin-bottom: 20px;
+    }
+}

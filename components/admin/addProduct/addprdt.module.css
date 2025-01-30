@@ -1,0 +1,315 @@
+.singlep{
+    position: relative;
+}
+.singlep .mainImage{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgb(0, 0, 0);
+    padding-top: 100px;
+    z-index: 999999;
+
+}
+.singlep .mainImage .close{
+    position: absolute;
+    color: white;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+}
+.singlep .mainImage img{
+    width: 600px;
+    aspect-ratio: 1/1;
+    border-radius: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+
+}
+.singlep .mains{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap:20px;
+    width: 100%;
+    font-family: var(--heading-font);
+}
+.singlep .metaDetails{
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 20px;
+    background-color: white;
+}
+.singlep .metaDetails div{
+    margin-bottom: 15px;
+}
+.singlep .metaDetails div textarea{
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+}
+.singlep .back .del{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.singlep .buttons{
+    display: flex;
+    align-items: center;
+}
+.singlep .back .del button{
+    padding: 7px 10px;
+    margin-left: 10px;
+    color: white;
+    font-weight: 500;
+    letter-spacing: 1px;
+    border: none;
+    cursor: pointer;
+    background-color: var(--primary-color);
+    margin-bottom: 7px;
+
+
+}
+
+.singlep .back .del button input{
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: 500;
+    letter-spacing: 1px;
+    border: none;
+    padding: 0;
+}
+.singlep{
+    margin: 50px;
+    padding: 0;
+}
+.singlep p{
+    margin-bottom: 4px;
+    font-weight: 600;
+    font-size: 14px;
+}
+.singlep input{
+    width: 100%;
+    padding: 5px;
+}
+.singlep .submit{
+    display: flex;
+    margin-top: 20px;
+
+}
+.singlep .submit input{
+    width: 150px;
+    margin-right: 20px;
+    border: 2px solid var(--primary-color);
+    color: white;
+    background-color: var(--primary-color);
+    
+}
+.singlep .submit button{
+    width: 150px;
+    margin-right: 20px;
+    border: 2px solid red;
+    color: white;
+    background-color: red;
+    
+}
+.singlep select{
+    width: 100%;
+    padding: 5px;
+}
+.singlep .mains .left .basic{
+    border-radius: 5px;
+    background-color: white;
+    padding: 10px;
+    height: 800px;
+}
+.singlep .mains .left .basic div{
+    margin-bottom: 15px;
+}
+.singlep .mains .left .basic .desc{
+    margin-top: 10px;
+    border: 1px solid gray;
+    height: 450px;
+    overflow: hidden;
+
+}
+.singlep .mains .left .basic .desc .descr{
+}
+.singlep .mains .left .media{
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 20px;
+    background-color: white;
+}
+.singlep .mains .left .media .imgbox{
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid grey;
+    padding: 5px;
+    grid-gap: 5px;
+    min-height: 300px;
+}
+.imageContainer{
+    position: relative;
+}
+.imageContainer .image{
+    position: relative;
+}
+.uploadBtn{
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+}
+.imageContainer .image:hover:after{
+    content: "";
+    position: absolute;
+    width: 140px;
+    height: 140px;
+    margin: 5px;
+    top: 0;
+    left: 0;
+    background-color: rgba(148, 148, 148, 0.473);
+    z-index: 4;
+    border-radius: 5px;
+}
+.imageContainer button{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: rgb(255, 255, 255);
+    background-color: transparent;
+    border:none;
+    cursor: pointer;
+    z-index: 7;
+}
+.imageContainer button:hover{
+    background-color: gray;
+}
+.singlep .mains .left .media .imgbox img{
+    width: 140px;
+    height: 140px;
+    border-radius: 5px;
+    margin: 5px;
+    border: 1px solid rgb(189, 189, 189);
+}
+.singlep .mains .left .media .img-box-in{
+    border: 1px solid rgb(133, 133, 133);
+    cursor: pointer;
+    height: 140px;
+    width: 140px;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.singlep .mains .left .variants{
+    margin-top: 20px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+.singlep .mains .left .variants .variant{
+    margin-bottom: 10px;
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr 1fr;
+    grid-gap: 10px;
+}
+.singlep .mains .left .variants button{
+    padding: 7px 12px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    border: 2px solid black;
+    background-color: black;
+    color: white;
+    transition: all 0.3s;
+}
+.singlep .mains .left .variants button:hover{
+    background-color: transparent;
+    color: black;
+}
+.singlep .mains .left .variants .v-category .var{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border: 1px solid rgb(184, 25, 25);
+    margin-top: 10px;
+    padding: 10px;
+    align-items: center;
+}
+
+.singlep .mains .right .status{
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+}
+.singlep .mains .right .insights{
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 20px;
+}
+.singlep .mains .right .insights div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.singlep .mains .right .p-organization{
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 20px;
+}
+.singlep .mains .right .p-organization div{
+    margin-top: 15px;
+}
+
+@media screen and (max-width:950px) {
+    .singlep .back .del{
+        flex-direction: column-reverse;
+        align-items: start;
+    }
+    .drag-p{
+        font-size: 12px;
+    }
+    .singlep{
+        margin: 10px 20px;
+    }
+    .singlep .mains .left .media .imgbox img{
+        width: 100px;
+        height: 100px;
+    }
+    .singlep .mains .left .media .img-box-in{
+        width: 100px;
+        height: 100px;
+    }
+    .singlep .mains{
+        grid-template-columns:1fr;
+    }
+    .singlep .buttons{
+        align-items: start;
+    }
+    .singlep .mainImage{
+        padding-top: 170px;
+    }
+    .singlep .mainImage img{
+        width: 600px;
+    }
+}
+@media screen and (max-width:650px){
+    .singlep .mainImage{
+        padding-top:25vh;
+    }
+    .singlep .mainImage img{
+        width: 380px;
+    }
+}

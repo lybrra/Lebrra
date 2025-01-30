@@ -1,0 +1,63 @@
+.banners .bannerHead{
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 5px 0;
+margin-bottom: 15px;
+}
+.banners .bannerHead p{
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+.banners .bannerHead button{
+    background-color: var(--primary-color);
+    color: white;
+    left: 1px;
+    font-size: 17px;
+    font-weight: 500;
+    padding: 6px 15px;
+    border: none;
+    cursor: pointer;
+}
+.banners .bannersBody{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 15px;
+}
+.banners .bannersBody .banner{
+    border: 1px solid var(--primary-color);
+    padding: 5px;
+    border-radius: 5px;
+}
+.banners .bannersBody .banner .bannerPreview{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.banners .bannersBody .banner .bannerPreview .closeIco{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 22px;
+    background-color: rgb(150, 150, 150);
+    border-radius: 50%;
+    padding: 3px;
+    cursor: pointer;
+}
+.banners .bannersBody .banner button{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+}

@@ -1,0 +1,1189 @@
+.orders{
+    padding:5px 10px;
+}
+.overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.53);
+}
+.singleOrder .dialog{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.53);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.singleOrder .dialog .dialogBody{
+    background-color: white;
+    min-width: 40vw;
+    padding: 10px;
+    border-radius: 5px;
+}
+.singleOrder .dialog .dialogBody .dialogHead{
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.singleOrder .dialog .dialogBody .dialogContent input{
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 8px;
+}
+.singleOrder .dialog .dialogBody .dialogContent input select{
+    width: 100%;
+    padding: 8px;
+}
+.singleOrder .dialog .dialogBody .dialogContent button{
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 7px 15px;
+    font-size: 17px;
+    letter-spacing: 1px;
+    margin-top: 15px;
+}
+.orders .addprdt{
+    position: fixed;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    min-height: 100vh;
+    background-color: rgba(0, 0, 0, 0.676);
+    z-index: 100;
+}
+.orders .addprdt .close{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: black;
+    font-size: 25px;
+    cursor: pointer;
+    background-color: white;
+    border-radius: 50%;
+    padding: 3px;
+}
+.orders .addprdt .addprdtbody{
+    width: 90vw;
+    background-color: white;
+    height: 100vh;
+    margin: 20px 0;
+    border-radius: 5px;
+    overflow-y: auto;
+}
+.orders .addprdt .addprdtbody::-webkit-scrollbar{
+    display: none;
+}
+.orders .marks{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+}
+.orders .marks .oks{
+    font-size: 24px !important;
+    cursor: pointer;
+    margin-left: 10px;
+}
+.orders .marks .ico1{
+    color: rgb(48, 196, 48);
+}
+.orders .marks .ico2{
+    color: rgb(213, 97, 97);
+}
+
+.orders .head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid gray;
+    padding: 5px 0;
+}
+.orders .head .heading{
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+    color: black;
+}
+.singleAban button{
+    background-color: var(--primary-color);
+    color: white;
+    left: 1px;
+    font-size: 17px;
+    font-weight: 500;
+    padding: 6px 15px;
+    border: none;
+    cursor: pointer;
+    margin-left: 5px;
+}
+.singleAban input{
+    width: 100%;
+    padding: 8px;
+    margin-left: 5px;
+}
+.orders .head button{
+    background-color: var(--primary-color);
+    color: white;
+    left: 1px;
+    font-size: 17px;
+    font-weight: 500;
+    padding: 6px 15px;
+    border: none;
+    cursor: pointer;
+}
+
+.singleOrder .alls{
+    margin: 10px 0;
+    border: 1px solid rgb(214, 214, 214);
+    padding: 8px;
+}
+.singleOrder .drawer{
+    position: fixed;
+    left: 0;
+    width: 100vw;
+    background-color: white;
+    min-height: 50vh;
+    padding: 10px;
+    z-index: 11;
+    border-radius: 10px 10px 0 0;
+    transition: all 0.3s ease-in-out;
+}
+.singleOrder .drawer p{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 22px;
+    color: black;
+    margin-bottom: 15px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+.singleOrder .drawer ul{
+    list-style: none;
+    margin-top: 30px;
+    
+}
+.singleOrder .drawer ul li{
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+.singleOrder .drawer ul li:hover{
+    color: var(--primary-color);
+}
+.singleOrder .drawer ul li .drawerIcon{
+    font-size: 18px;
+    margin-right: 10px;
+}
+.singleOrder .alls p{
+    margin-bottom: 10px;
+    font-weight: 500;
+    cursor: pointer;
+    font-size: 15px;
+    border: 1px solid rgb(200, 200, 200);
+    padding: 5px 2px;
+    border-radius: 5px;
+}
+.orders .searchs{
+    border: 1px solid gray;
+    z-index: 0;
+}
+.orders .searchs p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 5px;
+    cursor: pointer;
+    color: white;
+}
+.orders .search1{
+width: 50%;
+display: flex;
+align-items: center;
+background-color: black;
+z-index: 0;
+
+
+}
+.orders .search2{
+    margin-top: 10px;
+    width: 97%;
+    display: flex;
+align-items: center;
+background-color: black;
+display: none;
+
+
+}
+.orders .searchs input{
+    background-color: rgb(229, 229, 229);
+    color: black;
+    z-index: 0;
+    width: 100%;
+}
+
+.orders .searchs input{
+    padding: 8px;
+    width: 100%;
+    background-color: white;
+    border: none;
+}
+.orders .down{
+    display: flex;
+    align-items: center;
+}
+.orders .down div{
+    margin-left: 10px;
+    border: 1px solid grey;
+}
+.orders .down div button{
+    border-radius: 0;
+    padding:5px;
+    border: none;
+    cursor: pointer;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+
+}
+.orders .down div input{
+    width: 50px;
+    padding: 0;
+    border: none;
+    outline: none;
+    border: none;
+    background-color: transparent;
+}
+.orders .productTable{
+    width: 100%;
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 15px;
+    max-height: 90vh;
+    overflow-y: scroll;
+
+}
+.orders .productTable::-webkit-scrollbar{
+    display: none;
+}
+.orders .productTable .product{
+    background-color: white;
+    position: relative;
+    border: 1px solid var(--primary-color);
+    padding: 3px;
+}
+.orders .productTable .product .state{
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    letter-spacing: 1px;
+    padding: 2px 3px;
+    text-align: left;
+    font-size: 10px;
+    font-weight: 500;
+
+
+}
+.orders .productTable .product .delete{
+    position: absolute;
+    right: 0;
+    bottom: 0;    
+    display: flex;
+    align-items: center;
+}
+.orders .productTable .product .delete p{
+    margin-left: 15px;
+    padding: 2px 3px;
+    font-size: 23px;
+    color: rgb(255, 91, 91);
+    cursor: pointer;
+}
+.orders .productTable .product .delete p:nth-child(1){
+color: green;
+}
+.orders .productTable .product .paid{
+    background-color: rgba(156, 255, 156, 0.473);
+    color: green;
+
+}
+.orders .productTable .product .cod{
+    background-color: rgba(255, 253, 156, 0.473);
+    color: rgb(77, 75, 0);
+
+}
+.orders .productTable .product .cancel{
+    background-color: rgba(255, 156, 156, 0.473);
+    color: rgb(202, 0, 0);
+
+}
+.orders .productTable .product:hover{
+    box-shadow: 0 4px 8px 0 rgba(121, 121, 121, 0.2), 0 6px 20px 0 rgba(105, 105, 105, 0.19);
+    scale: 1.01;
+
+}
+.orders .productTable .product .productImg{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    margin-bottom: 2px;
+    grid-gap: 5px;
+
+}
+.orders .productTable .product .productImg img{
+    width: 80px;
+    aspect-ratio: 1/1;
+    border: 1px solid var(--primary-color);
+}
+.orders .productTable .product span{
+    font-weight: 600;
+    margin-right: 5px;
+    color: #c19156;
+}
+.orders .productTable .product p{
+    padding: 2px;
+    font-size: 11px;
+    color: rgb(83, 83, 83);
+}
+.orders .productTable .product .number{
+    font-weight: bold;
+}
+.orders .productTable .product .time{
+    font-size: 11px;
+}
+.orders .productTable .product .name{
+    text-transform: uppercase;
+}
+.orders .productTable .product .amount{
+    font-size: 11px;
+}
+.orders .productTable .product .phone{
+    color: rgb(11, 21, 139);
+    font-weight: 600;
+    padding-bottom: 5px;
+
+}
+.orders .paginate{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0;
+}
+.orders .paginate button{
+    width: 70px;
+    border: none;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 5px 0;
+    font-size: 16px;
+    cursor: pointer;
+}
+.orders .paginate p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 15px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid rgb(171, 171, 171);
+    border-radius: 50%;
+
+}
+
+.singleOrder{
+    margin: 10px;
+}
+.singleOrder .orderHead{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    color: black;
+}
+.singleOrder .orderHead .left{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.singleOrder .orderHead .left .number{
+    font-size: 25px;
+    font-weight: 600;
+    color: rgb(67, 67, 67);
+}
+.singleOrder .orderHead .left .number span{
+    color: rgb(130, 130, 130);
+}
+.singleOrder .orderHead .left .date{
+    font-size: 13px;
+    color: rgb(67, 67, 67);
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+}
+
+.singleOrder .orderHead .left .date .date-icon{
+    font-size: 15px;
+    margin-right:5px;
+}
+.singleOrder .orderHead .left .stati{
+    font-size: 11px;
+    font-weight: 500;
+    padding: 3px 7px;
+    border-radius: 5px;
+}
+.singleOrder .status{
+   
+    background-color:rgba(255, 253, 124, 0.591);
+    color: rgb(170, 162, 1);
+}
+.singleOrder .status1{
+    background-color:rgba(255, 209, 124, 0.591);
+    color: rgb(170, 111, 1);
+}
+.singleOrder .status2{
+    background-color:rgba(124, 255, 124, 0.591);
+    color: rgb(1, 170, 4);
+}
+.singleOrder .orderHead .left .type{
+    font-size: 11px;
+    font-weight: 500;
+    padding: 3px 7px;
+    border-radius: 5px;
+    background-color: rgba(156, 255, 156, 0.473);
+    color: green;
+}
+
+.singleOrder .orderHead .left .cod{
+    background-color: rgba(252, 255, 156, 0.473);
+    color: rgb(128, 124, 0);
+}
+.singleOrder .orderHead .left .cancel{
+    background-color: rgba(255, 156, 156, 0.473);
+    color: rgb(128, 0, 0);
+}
+.singleOrder .orderHead .left p{
+    margin-right: 15px;
+}
+.singleOrder .orderHead .right{
+    display: flex;
+    align-items: center;
+}
+.singleOrder .orderHead .right button:nth-child(1){
+    background-color: rgba(201, 201, 201, 0.541);
+    border: 1px solid rgb(0, 0, 0);
+    color: rgb(28, 28, 28);
+    border-radius: 5px;
+    padding: 4px 4px;
+    margin-right: 15px;
+}
+.singleOrder .orderHead .right button:nth-child(2){
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    padding: 6px 10px;
+    margin-right: 15px;
+    border: none;
+    letter-spacing: 1px;
+}
+.singleOrder .orderHead .right button:nth-child(1) .icon{
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.singleOrder .orderDetail{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 20px;
+}
+.singleOrder .orderDetail .leftSection .orderProducts{
+    background-color: white;
+    padding: 15px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+
+}
+.singleOrder .orderDetail .leftSection .orderProducts .prdt{
+    border-bottom: 1px solid rgb(231, 231, 231);
+    padding: 5px 0;
+}
+.singleOrder .orderDetail .leftSection .orderProducts .prdt .left{
+    display: grid;
+    grid-template-columns: 0.7fr 2fr 1fr 0.5fr 1fr;
+    grid-gap: 10px;
+}
+.singleOrder .orderDetail .leftSection .orderProducts .prdt .left img{
+    width: 90px;
+    aspect-ratio: 1/1;
+    border: 1px solid rgb(227, 227, 227);
+}
+.singleOrder .orderDetail .leftSection .orderProducts .prdt .left .details p:nth-child(1){
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 1px;
+    margin-bottom: 7px;
+    margin-right: 10px;
+    color: rgb(48, 48, 48);
+}
+.singleOrder .orderDetail .leftSection .orderProducts .prdt .left .details p{
+    color: rgb(115, 115, 115);
+    font-size: 13px;
+    font-weight: 600;
+}
+.singleOrder .orderDetail .leftSection .orderProducts .prdt .left .details p span{
+    font-size: 13px;
+    font-weight: 500;
+    margin-right: 5px;
+}
+.singleOrder .orderDetail .leftSection .orderProducts .prdt .left .total{
+    font-weight: 600;
+    font-size: 13px;
+    color: rgb(48, 48, 48);
+    text-align: right;
+}
+.singleOrder .orderDetail .leftSection .orderProducts .prdt .left .price{
+    font-weight: 600;
+    font-size: 13px;
+    color: rgb(186, 0, 0);
+    text-align: right;
+}
+.singleOrder .orderDetail .leftSection .orderProducts .prdt .left .qty{
+    font-weight: 500;
+    font-size: 13px;
+    color: rgb(48, 48, 48);
+    text-align: right;
+}
+.singleOrder .orderDetail .leftSection .paymentInfo{
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+
+    padding: 15px;
+    margin-top: 20px;
+}
+.singleOrder .orderDetail .leftSection .paymentInfo .head{
+    font-size: 17px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.singleOrder .orderDetail .leftSection .paymentInfo .payment{
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+    grid-gap: 10px;
+}.singleOrder .orderDetail .leftSection .paymentInfo .payment p{
+    margin-bottom: 10px;
+}.singleOrder .orderDetail .leftSection .paymentInfo .payment .center{
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+}
+.singleOrder .orderDetail .leftSection .paymentInfo .payment .right{
+    font-weight: 600;
+    text-align: right;
+    color: rgb(40, 40, 40);
+}.singleOrder .orderDetail .rightSection{
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+
+}
+.singleOrder .orderDetail .rightSection .rightHead{
+    font-weight: 600;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+.singleOrder .orderDetail .rightSection .customerName{
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    letter-spacing: 1px;
+    font-size: 14px;
+}
+.singleOrder .orderDetail .rightSection .customerName img{
+    width: 30px;
+    margin-right: 10px;
+}
+.singleOrder .orderDetail .rightSection .customerOrders{
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    letter-spacing: 1px;
+    font-size: 14px;
+}
+.orderIcon{
+    width: 35px;
+    color: blue;
+    background-color: rgba(192, 192, 255, 0.562);
+    height: 30px;
+    border-radius: 50%;
+    padding: 5px;
+    margin-right: 10px;
+
+    
+}
+.singleOrder .orderDetail .rightSection .email{
+    margin-top: 25px;
+}
+.singleOrder .orderDetail .rightSection .email p{
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    font-size: 13px;
+}
+
+
+.newOrder{
+    margin: 20px;
+}
+.newOrder .head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.newOrder .head p{
+    font-weight: 500;
+    font-size: 15px;
+}
+.newOrder .orderData{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 15px;
+}
+.newOrder .orderData .products{
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+
+}
+.newOrder .orderData .products .search{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-color: rgba(245, 245, 245, 0.726);
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid rgb(50, 50, 50);
+    position: relative;
+}
+.newOrder .orderData .products .search .dialog{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: white;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid gray;
+
+}
+.newOrder .orderData .products .search .dialog .dialogHead{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.newOrder .orderData .products .search .searchIcon{
+    font-size: 19px;
+    color: rgb(122, 122, 122);
+    margin-right: 8px;
+}
+.newOrder .orderData .products .search input{
+    width: 95%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+.newOrder .orderData .products .headings{
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr;
+    grid-gap: 10px;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    border-bottom: 1px solid rgb(203, 203, 203);
+    padding-bottom: 10px;
+
+}
+.newOrder .orderData .products .product{
+    margin: 15px 0;
+}
+.newOrder .orderData .products .productData{
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr;
+    grid-gap: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid rgb(203, 203, 203);
+    padding-bottom: 10px;
+}
+.newOrder .orderData .products .productData div:nth-child(1){
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-gap: 10px;
+    font-size: 14px;
+
+}
+.newOrder .orderData .products .productData div:nth-child(1) img{
+    width: 100%;
+    aspect-ratio: 1/1;
+    border: 1px solid rgb(149, 149, 149);
+    border-radius: 5px;
+
+}
+.newOrder .orderData .products .productData div:nth-child(1) .title{
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+.newOrder .orderData .products .productData div:nth-child(1) .size{
+    font-weight: 400;
+    margin-bottom: 8px;
+    font-size: 12px;
+
+}
+.newOrder .orderData .products .productData div:nth-child(1) .sku{
+    font-weight: 400;
+    margin-bottom: 8px;
+    font-size: 12px;
+
+}
+.newOrder .orderData .products .productData div:nth-child(1) .price{
+    font-weight: 400;
+    margin-bottom: 8px;
+    font-size: 12px;
+
+}
+.newOrder .orderData .products .productData div:nth-child(2) input{
+    width: 70%;
+    padding: 8px 10px;
+    font-weight: 600;
+    border: 1px solid rgb(149, 149, 149);
+    border-radius: 5px;
+
+}
+.newOrder .orderData .products .productData div:nth-child(3){
+    display: flex;
+    justify-content: space-between;
+
+}
+.newOrder .orderData .products .productData div:nth-child(3) p .delete-icon{
+    margin-left: 10px;
+    font-size: 20px;
+    color: gray;
+    cursor: pointer;
+
+}
+.newOrder .orderData .payment{
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+}
+.newOrder .orderData .payment .paymentInfo{
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-gap: 10px;
+    align-items: center;
+}
+.newOrder .orderData .payment .paymentInfo p{
+    margin-bottom: 15px;
+    font-size: 13px;
+    color: rgb(105, 105, 105);
+    font-weight: 500;
+}
+.newOrder .orderData .payment .paymentInfo .right{
+    text-align: right;
+}
+.newOrder .orderData .payment .paymentInfo input{
+    width: 80px;
+    padding: 5px;
+}
+.newOrder .orderData .dataRight .notes{
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 20px;
+
+}
+
+.newOrder .orderData .dataRight .notes input{
+    padding: 8px;
+    border: 1px solid rgb(39, 39, 39);
+    border-radius: 5px;
+    width: 100%;
+}
+.newOrder .orderData .dataRight .notes select{
+    padding: 8px;
+    border: 1px solid rgb(39, 39, 39);
+    border-radius: 5px;
+    width: 100%;
+}
+.newOrder .orderData .dataRight .customerDetail input{
+    margin-bottom: 5px;
+}
+.filterBtn{
+    margin-top: 20px;
+    padding: 8px 20px;
+    cursor: pointer;
+    scale: 0.9;
+    border: none;
+    background-color: rgb(74, 74, 255);
+    border-radius: 5px;
+    color: white;
+    font-weight: 500;
+    font-size: 11px;
+    letter-spacing: 1px;
+    box-shadow: 0 0px 0px 0 rgba(74, 74, 255, 0.300), 0 3px 5px 0 rgba(74, 74, 255, 0.300);
+}
+.newOrder button{
+    cursor: pointer;
+    padding: 8px 10px;
+    scale: 0.9;
+    border: none;
+    background-color: rgb(74, 74, 255);
+    border-radius: 5px;
+    color: white;
+    font-weight: 500;
+    font-size: 11px;
+    letter-spacing: 1px;
+    box-shadow: 0 0px 0px 0 rgba(74, 74, 255, 0.300), 0 3px 5px 0 rgba(74, 74, 255, 0.300);
+}
+
+.dialog .searchDialog{
+   
+    display: flex;
+    align-items: center;
+    background-color: rgb(241, 241, 241);
+    border-radius: 5px;
+    padding: 8px;
+}
+.dialog .searchDialog .searchIcon{
+    font-size: 18px;
+    margin-right: 5px;
+    color: rgb(166, 166, 166);
+}
+.dialog .searchDialog input{
+    outline: none;
+    border: none;
+    background: transparent;
+    width: 100%;
+}
+.newOrder .orderData .dataRight .notes .customerDetail{
+    margin: 20px 0;
+}
+.newOrder .orderData .dataRight .notes .customerDetail p{
+    margin-top: 10px;
+    font-size: 13px;
+    font-weight: 500;
+}
+.dialog .productList{
+    height: 300px;
+    overflow-y: scroll;
+    padding: 10px;
+    
+}
+.dialog .productList .productMain{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+.dialog .productList .listProduct{
+    padding: 10px 0;
+    border-bottom: 1px solid rgb(220, 220, 220);
+}
+.dialog .productList .listProduct .productDrop{
+    margin-left: 60px;
+    margin-top: 20px;
+}
+.dialog .productList .listCustomer{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-gap: 10px;
+    padding: 10px;
+    border-bottom: 1px solid rgb(219, 219, 219);
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+}
+.dialog .productList .listProduct .productDrop ul li{
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-size: 13px;
+    display: grid;
+    grid-template-columns:0.2fr 2fr 1fr 1fr;
+    border-bottom: 1px solid rgb(220, 220, 220);
+    grid-gap: 10px;
+    padding: 5px 0;
+}
+.dialog .productList .productMain img{
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    border: 1px solid gray;
+}
+.dialog .productList .productMain .dropIcon{
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+    /* background-color: rgb(232, 232, 232); */
+    border: 1px solid gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: gray;
+    border-radius: 50%;
+}
+
+.dialog .productList .productMain .dropIcon:hover{
+    box-shadow: 0 2px 4px 0 rgba(121, 121, 121, 0.2), 0 3px 10px 0 rgba(92, 92, 92, 0.19);
+
+}
+
+.dialog .productList .productMain div{
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.dialog .productList .productMain div p{
+    font-size: 12px;
+    font-weight: 600;
+    margin-left: 10px;
+}
+.packingSlip .head{
+    display: flex;
+    justify-content: space-between;
+}
+.packingSlip .head h1{
+    font-size: 25px;
+    letter-spacing: 2px;
+}
+.packingSlip .head p{
+    margin-bottom: 2px;
+    font-size: 12px;
+}
+.packingSlip p{
+    line-height: normal;
+}
+.packingSlip .detail{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    margin-top: 10px;
+}
+.packingSlip .detail p{
+    margin-bottom: 3px;
+    font-size: 12px;
+}
+.packingSlip .head{
+    
+        margin-bottom: 2px;
+        font-size: 12px;    
+}
+.packingSlip .item{
+    display: flex;
+    justify-content: space-between; 
+    margin-top: 17px;
+}
+.packingSlip .item img{
+    width: 70px;
+    height: 70px;
+}
+.packingSlip .img{
+    display: flex;
+}
+.packingSlip .item p{
+    font-size: 12px;
+}
+.packingSlip .produDetail p{
+    margin-bottom: 2px;
+    font-size: 12px;
+    margin-left: 10px;
+
+}
+.packingSlip .totalAmount{
+    margin-top: 10px;
+}
+.packingSlip .totalAmount p{
+    margin-bottom: 2px;
+    font-size: 12px;
+
+}
+.packingSlip .shop {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+}
+.packingSlip .shop p{
+    margin-bottom: 2px;
+    font-size: 12px;
+}
+
+
+.singleOrder .message{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 15px;
+    margin: 50px 0;
+}
+.singleOrder .message .msg{
+    border: 1px solid rgb(210, 210, 210);
+    padding: 10px 5px;
+    border-radius: 5px;
+
+}
+.singleOrder .message .msg .comments{
+    margin-top: 20px;
+}
+.singleOrder .message .msg .comments p{
+    font-size: 15px;
+    font-weight: 500;
+}
+.singleOrder .message .msg .comments .commentBox{
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.singleOrder .message .msg .comments .commentBox .msgC{
+    margin-top: 10px;
+    font-weight: 400;
+
+}
+.singleOrder .message .msg .comments .commentBox .name{
+    display: flex;
+    align-items: center;
+}
+.singleOrder .message .msg .comments .commentBox .name .time{
+    margin-left: 15px;
+    font-size: 13px;
+    
+}
+.singleOrder .history{
+    border: 1px solid rgb(210, 210, 210);
+    padding: 10px 5px;
+    border-radius: 5px;
+}
+.singleOrder .history .historyBox{
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.singleOrder .history .historyBox .msgC{
+    margin-top: 10px;
+    font-weight: 400;
+
+}
+.singleOrder .history .historyBox .name{
+    display: flex;
+    align-items: center;
+}
+.singleOrder .history .historyBox .name .time{
+    margin-left: 15px;
+    font-size: 13px;
+    
+}
+.singleOrder .message .form{
+    background-color: white;
+    padding: 10px;
+    margin: 10px 0;
+}
+.singleOrder .message .form input{
+    padding: 8px;
+    background-color: rgb(238, 238, 238);
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    width: 100%;
+    margin: 10px 0;
+}
+.singleOrder .message .form button{
+    padding: 8px 20px;
+    cursor: pointer;
+    scale: 0.9;
+    border: none;
+    background-color: rgb(74, 74, 255);
+    border-radius: 5px;
+    color: white;
+    font-weight: 500;
+    font-size: 11px;
+    letter-spacing: 1px;
+    box-shadow: 0 0px 0px 0 rgba(74, 74, 255, 0.300), 0 3px 5px 0 rgba(74, 74, 255, 0.300);
+}
+
+.search2{
+    display: none;
+}
+@media screen and (max-width:1450px) {
+    .orders .productTable{
+        padding: 5px 0;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 10px;
+
+    
+    }
+}
+@media screen and (max-width:1250px) {
+    .orders .productTable{
+        padding: 5px 0;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 10px;
+
+    
+    }
+}
+@media screen and (max-width:950px) {
+    .orders .productTable{
+        padding: 5px 0;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 5px;
+
+    
+    }
+    .orders .search1{
+        display: none;
+    }
+    .orders .search2{
+        display: flex;
+    }
+    .singleOrder .orderDetail{
+        grid-template-columns:1fr;
+    }
+    .newOrder .orderData{
+        grid-template-columns:1fr;
+    }
+}
+@media screen and (max-width:650px) {
+.orders .head{
+    flex-direction: column;
+}
+    .orders .productTable{
+        padding: 5px 0;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap:15px;
+
+    
+    }
+
+}

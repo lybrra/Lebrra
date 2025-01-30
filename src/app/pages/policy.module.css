@@ -1,0 +1,29 @@
+.policy{
+    margin: 80px 8vw;
+    
+}
+.policy h1{
+    font-size: 35px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--primary-color);
+    font-family: 800;
+    margin-bottom: 30px;
+    text-align: center;
+}
+.policy .bold{
+    margin-bottom: 20px;
+    font-size: 22px;
+    letter-spacing: 1px;
+    font-size: 600;
+    color: rgb(80, 80, 80);
+}
+.policy p{
+    margin-bottom: 30px;
+    font-size: 17px;
+    color: gray;
+    line-height: 1.7;
+}
+.policy a{
+    color: rgb(115, 115, 255);
+}
