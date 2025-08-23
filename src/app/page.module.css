@@ -166,6 +166,12 @@ margin-top: 77px;
 .home .trendingCollections .trendingBanner img{
     width: 100%;
 }
+.home .trendingCollections .viewAll{
+    margin-top: 16px;
+    margin-bottom: 16px;
+    display: flex;
+    justify-content: flex-end;
+}
 .loading{
     position: fixed;
     top: 70px;
