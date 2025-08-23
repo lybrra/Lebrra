@@ -60,6 +60,12 @@ const [show,setShow]=useState(false)
 const [email,setEmail]=useState("")
 const [password,setPassword]=useState("")
 const [user,setUser]=useState("")
+// Change password modal state
+const [showChangePwd,setShowChangePwd]=useState(false)
+const [showPwd,setShowPwd]=useState(false)
+const [currentPassword,setCurrentPassword]=useState("")
+const [newPassword,setNewPassword]=useState("")
+const [confirmNewPassword,setConfirmNewPassword]=useState("")
 useEffect(()=>{
     const user1=JSON.parse(localStorage.getItem("user"))
 if(user1){
@@ -114,6 +120,50 @@ catch(err){
 const logoutClick=()=>{
     localStorage.removeItem("user")
     setUser("")
+}
+
+const handleChangePassword = async () => {
+    try{
+        if(currentPassword==="" || newPassword==="" || confirmNewPassword===""){
+            toast.error("Please fill all fields")
+            return
+        }
+        if(newPassword.length < 6){
+            toast.error("New password must be at least 6 characters")
+            return
+        }
+        if(newPassword !== confirmNewPassword){
+            toast.error("Passwords do not match")
+            return
+        }
+        const token=user?.token
+        if(!token){
+            toast.error("Not authorized. Please login again.")
+            return
+        }
+        const res=await fetch(`/api/user/change-password?token=${token}`,{
+            method:"PUT",
+            headers:{"Content-Type":"application/json"},
+            body:JSON.stringify({currentPassword,newPassword,confirmNewPassword})
+        })
+        const data = await res.json()
+        if(res.ok){
+            toast.success("Password updated. Please login again.")
+            // reset and logout
+            setShowChangePwd(false)
+            setCurrentPassword("")
+            setNewPassword("")
+            setConfirmNewPassword("")
+            localStorage.removeItem("user")
+            setUser("")
+            setLogin(true)
+        }
+        else{
+            toast.error(data?.message || "Failed to update password")
+        }
+    }catch(err){
+        toast.error("Something went wrong")
+    }
 }
 
 
@@ -287,7 +337,10 @@ useEffect(()=>{
                            
                         </div>
                     </div>
+                    <div style={{display:"flex",gap:"8px",alignItems:"center"}}>
                     <button onClick={logoutClick}>Logout</button>
+                    <button onClick={()=>setShowChangePwd(true)}>Change Password</button>
+                    </div>
 
                 <div className={styles.adminMenu} style={{left:ham?0:"-100%"}}>
                     <ul>
@@ -325,7 +378,31 @@ useEffect(()=>{
             </div>
         </div>
   }
-        
+        {/* Change Password Modal */}
+        <div className={styles.loginPage} style={{display:showChangePwd?"flex":"none", position:"fixed", top:0, left:0, width:"100vw", height:"100vh", zIndex:3}}>
+            <div className={styles.loginForm}>
+                <p style={{textAlign:"center",fontSize:'18px',fontWeight:600,letterSpacing:'0.5px',marginBottom:"15px",color:'black'}}>Change Password</p>
+                <div>
+                    <input type={showPwd?"text":"password"} placeholder='Current Password' value={currentPassword} onChange={(e)=>setCurrentPassword(e.target.value)} />
+                    <IoIosEyeOff style={{display:show?"flex":"none"}} className={styles.eyeIcon} onClick={(e)=>setShowPwd(false)}/>
+                    <IoMdEye style={{display:show?"none":"flex"}} className={styles.eyeIcon} onClick={(e)=>setShowPwd(true)}/>
+                </div>
+                <div>
+                    <input type={showPwd?"text":"password"} placeholder='New Password' value={newPassword} onChange={(e)=>setNewPassword(e.target.value)} />
+                    <IoIosEyeOff style={{display:show?"flex":"none"}} className={styles.eyeIcon} onClick={(e)=>setShowPwd(false)}/>
+                    <IoMdEye style={{display:show?"none":"flex"}} className={styles.eyeIcon} onClick={(e)=>setShowPwd(true)}/>
+                </div>
+                <div>
+                    <input type={showPwd?"text":"password"} placeholder='Confirm New Password' value={confirmNewPassword} onChange={(e)=>setConfirmNewPassword(e.target.value)} />
+                    <IoIosEyeOff style={{display:show?"flex":"none"}} className={styles.eyeIcon} onClick={(e)=>setShowPwd(false)}/>
+                    <IoMdEye style={{display:show?"none":"flex"}} className={styles.eyeIcon} onClick={(e)=>setShowPwd(true)}/>
+                </div>
+                <div style={{display:"flex",gap:"8px"}}>
+                <button onClick={handleChangePassword}>Update</button>
+                <button onClick={()=>setShowChangePwd(false)} style={{backgroundColor:'#777'}}>Cancel</button>
+                </div>
+            </div>
+        </div>
         
     </div>
   )
