@@ -4,6 +4,7 @@ import styles from '../src/app/page.module.css'
 import Prdt4Grid from './Prdt4Grid'
 import Link from 'next/link'
 import Image from 'next/image'
+import { FiArrowRight } from "react-icons/fi";
 const TrendingCol = ({name,collections,banner,prdts,color}) => {
   const modifyCloudinaryUrl = (url) => {
     const urlParts = url?.split('/upload/');
@@ -11,7 +12,9 @@ const TrendingCol = ({name,collections,banner,prdts,color}) => {
   };
   return (
     <div className={styles.trendingCollections}>
-          <h1 style={{color:color}}>TRENDING {name}</h1>
+          <div style={{position: 'relative', marginBottom: '20px'}}>
+            <h1 style={{color:color, textAlign: 'center', margin: '20px 0'}}>TRENDING {name}</h1>
+          </div>
           <div className={styles.collections}>
         
              <Link href={`/collections/${collections?.handle}`} >
@@ -27,7 +30,22 @@ const TrendingCol = ({name,collections,banner,prdts,color}) => {
             
           </div>
           <div className={styles.trendingBanner}>
-<Image src={banner} alt="Collection Banner" width={1200} height={230} style={{width:"100%",objectFit:"cover",height:"auto"}}/>
+            <Image src={banner} alt="Collection Banner" width={1200} height={230} style={{width:"100%",objectFit:"cover",height:"auto"}}/>
+          </div>
+          <div className={styles.viewAll}>
+            <Link href={`/collections/${collections?.handle}`} style={{
+              color: color,
+              textDecoration: 'none',
+              fontSize: '16px',
+              fontWeight: '500',
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '6px',
+              lineHeight: 1
+            }}>
+              <span>View all</span>
+              <FiArrowRight style={{ width: '1em', height: '1em' }} aria-hidden />
+            </Link>
           </div>
           <Prdt4Grid prdts={prdts} color={color}/>
         </div>
