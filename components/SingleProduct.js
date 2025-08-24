@@ -17,6 +17,23 @@ const [mainImage, setMainImage] = useState(product?.images[0]?.url || null);
 const [pquantity, setPquantity] = useState(null);
 const {myCarts,setMyCart } = useContext(GlobalContext);
 const [cart, setCart] = useState([]);
+const [coupons, setCoupons] = useState([]);
+
+useEffect(() => {
+  const fetchCoupons = async () => {
+    try {
+      const response=await fetch(`/api/coupon/get-coupons`)
+      const data = await response.json();
+      setCoupons(data);
+    } catch (err) {
+      console.error("Error fetching coupons", err);
+    }
+  };
+
+  fetchCoupons();
+}, []);
+
+
 useEffect(()=>{
   setCart(JSON.parse(localStorage.getItem("cartState")) || []) 
   setColor((product?.variants[0]?.color || "").trim() )
@@ -244,7 +261,7 @@ useEffect(() => {
       existingCart?
       <p style={{marginBottom:'15px',fontWeight:500,letterSpacing:"1px",color:"red"}}>Already In Cart</p>
       :""
-    }
+    }           <p><span><CiRuler /></span> <span>Size Chart</span></p>
                 <div className={styles.sizeOptions}>
                     <select name="" id="" value={size} onChange={(e)=>setSize((e.target.value).trim())}>
                         {
@@ -289,8 +306,22 @@ useEffect(() => {
 } */}
                 </div>
                 <div className={styles.offers}>
-                <p><span><CiRuler /></span> <span>Size Chart</span></p>
-                    <p><span><BiSolidOffer /></span><span>Use SAVE5 to get 5% Instant Discount</span></p>
+                {/* <p><span><CiRuler /></span> <span>Size Chart</span></p> */}
+                {/* <p><span><BiSolidOffer /></span><span>Use SAVE5 to get 5% Instant Discount</span></p> */}
+                    {coupons && coupons.length > 0 && (() => {
+                      const validCoupon = coupons.find(
+                        (coupon) => coupon.status === "active" && coupon.customertype === "all" && coupon.discounttype === "order"
+                      );
+
+                      return validCoupon ? (
+                        <p>
+                          <span><BiSolidOffer /></span>
+                          <span>
+                            Use <b>{validCoupon.name}</b> to get {validCoupon.discount} Instant Discount
+                          </span>
+                        </p>
+                      ) : null;
+                    })()}
                     <p><span><BiSolidOffer /></span><span>Flat 10% Discount on Prepaid Orders</span></p>
                     <p><span><BiSolidOffer /></span><span>Free Shipping on Prepaid Orders</span></p>
                 </div>
