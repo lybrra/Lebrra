@@ -25,6 +25,7 @@ isFeatured:{
 handle:{
   type:String,
   unique: true,
+  sparse: true,
   lowercase: true,
 },
 order:{
@@ -56,7 +57,6 @@ collections:[
     },
     handle:{
       type:String,
-      unique: true,
       lowercase: true,
     },
     order:{
